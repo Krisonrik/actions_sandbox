@@ -6,4 +6,4 @@ jobs:
     name: print payload to screen
     runs-on: ubuntu-latest
     steps:
-      - run: cat print_payload.txt
+      - run: cat ./print_payload.txt
