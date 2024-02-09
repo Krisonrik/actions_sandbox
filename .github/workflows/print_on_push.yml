@@ -1,0 +1,6 @@
+name: Print Something
+on: push
+
+jobs:
+  print-job:
+    uses: ./.github/workflows/print_something.yml

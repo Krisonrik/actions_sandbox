@@ -6,4 +6,7 @@ jobs:
     name: print payload to screen
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{github.base_ref}}
       - run: cat ./print_payload.txt
