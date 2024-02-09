@@ -6,4 +6,7 @@ jobs:
     name: print payload to screen
     runs-on: ubuntu-latest
     steps:
-      - run: echo "this is main"
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{github.sha}}
+      - run: echo ${{github.sha}}
