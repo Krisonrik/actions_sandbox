@@ -9,4 +9,4 @@ jobs:
       contains(github.event.comment.body, '/trigger')
     uses: ./.github/workflows/print_something.yml
     with:
-      branch: ${{github.action_ref}}
+      branch: ${{github.base_ref}}
