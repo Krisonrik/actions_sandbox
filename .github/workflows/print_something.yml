@@ -8,5 +8,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{github.sha}}
-      - run: echo ${{github.sha}}
+          ref: ${{github.base_ref}}
+      - run: echo ${{github.base_ref}}
