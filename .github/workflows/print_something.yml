@@ -13,4 +13,5 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{inputs.branch}}
+      - run: echo  ${{inputs.branch}}
       - run: cat ./print_payload.txt
