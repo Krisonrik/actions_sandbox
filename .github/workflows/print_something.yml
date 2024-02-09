@@ -1,0 +1,9 @@
+name: Print Something
+on: workflow_call
+
+jobs:
+  print-job:
+    name: print payload to screen
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo print_payload.txt

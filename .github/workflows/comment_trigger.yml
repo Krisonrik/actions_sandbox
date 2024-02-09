@@ -1,0 +1,10 @@
+name: comment trigger
+on:
+  issue_comment:
+    types: [created]
+jobs:
+  regression-test:
+    if: |
+      contains(github.event.comment.html_url, '/pull/') &&
+      contains(github.event.comment.body, '/trigger')
+    uses: ./.github/workflows/print_something.yml
