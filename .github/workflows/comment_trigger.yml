@@ -10,3 +10,8 @@ jobs:
     uses: ./.github/workflows/print_something.yml
     with:
       branch: ${{github.base_ref}}
+
+  print-value:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo  ${{github.base_ref}}
