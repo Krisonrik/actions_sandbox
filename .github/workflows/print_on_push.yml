@@ -1,0 +1,9 @@
+name: Print Something
+on: push
+
+jobs:
+  print-job:
+    name: print payload to screen
+    runs-on: ubuntu-latest
+    steps:
+      - run: ls
