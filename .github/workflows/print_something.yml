@@ -1,6 +1,10 @@
 name: Print Something
-on: workflow_call
-
+on:
+  workflow_call:
+    inputs:
+      branch:
+        type: string
+        required: true
 jobs:
   print-job:
     name: print payload to screen
@@ -8,5 +12,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{github.base_ref}}
+          ref: ${{inputs.branch}}
       - run: cat ./print_payload.txt
