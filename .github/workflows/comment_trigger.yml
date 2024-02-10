@@ -9,9 +9,9 @@ jobs:
       contains(github.event.comment.body, '/trigger')
     uses: ./.github/workflows/print_something.yml
     with:
-      branch: ${{github.base_ref}}
+      branch: ${GITHUB_REF}
 
   print-value:
     runs-on: ubuntu-latest
     steps:
-      - run: echo  ${{github.base_ref}}
+      - run: echo ${GITHUB_REF}
