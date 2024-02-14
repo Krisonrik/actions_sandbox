@@ -1,5 +1,9 @@
 name: Print Something
-on: workflow_call
+on:
+  workflow_call:
+    inputs:
+      print-content:
+        type: string
 
 jobs:
   print-job:
@@ -9,4 +13,5 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{github.base_ref}}
+      - run: echo ${{inputs.print-content}}
       - run: cat ./print_payload.txt

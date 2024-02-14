@@ -1,6 +1,8 @@
-name: Print Something
+name: Print commit message
 on: push
 
 jobs:
   print-job:
     uses: ./.github/workflows/print_something.yml
+    with:
+      print-content: ${{ github.event.head_commit.message }}
