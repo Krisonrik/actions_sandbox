@@ -5,6 +5,9 @@ on:
       branch:
         type: string
         required: true
+      print-content:
+        type: string
+
 jobs:
   print-job:
     name: print payload to screen
@@ -13,5 +16,5 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{inputs.branch}}
-      - run: echo ${{inputs.branch}}
+      - run: echo ${{inputs.print-content}}
       - run: cat ./print_payload.txt
